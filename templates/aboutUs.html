@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>What On Earth </title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+   </head>
+   <body>
+      <div class="big">
+         <div class="overlay">
+            <h1>
+               <strong>
+               Associative
+               Classification
+               </strong>
+            </h1>
+               <nav>
+                  <ul class="menu">
+                     <li><a href="{{ url_for('instruction') }}">Click here to read our instruction</a></li>
+                     <li><a href="{{ url_for('mainPage') }}">Click here to start using our algorithm</a></li>
+                  </ul>
+               </nav>
+            </div>
+      </div>
+   </body>
+</html>

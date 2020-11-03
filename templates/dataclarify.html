@@ -1,0 +1,33 @@
+<html>
+   <body>
+       {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+<!--    <div style="height: 100%;width: 100%;position: relative;background-color:#D6BB83">-->
+       <nav>
+           <ul class="backbtn">
+               <li><a href="{{ url_for('mainPage') }}"><< Return Back</a></li>
+           </ul>
+       </nav>
+<!--    </div>-->
+       <div style="text-align:center;background-color: #D6BB83;height: 100%;" >
+      <form method="POST" action="#" >
+          <p>Please enter the class column. There can only be one class column.*</p>
+          <p><input type="number" name="nm" placeholder=" Ex: 5" min=1 required pattern="[0-9]*"/></p>
+          <p>Enter your Minimum Support*</p>
+          <p><input type="number" name="support" min=1 required pattern="[0-9]*" placeholder=" Ex: 5 "/></p>
+          <p>Enter your Minimum Confidence*</p>
+          <p><input type="number" name="confidence" required pattern="[0.1-1]*" step=0.1 min=0.1 max=1.0 placeholder=" Ex: 0.8 "/></p>
+          <p>Enter the numerical columns index of your dataset</p>
+          <p><input type="text" name="numericalCol" placeholder=" Ex: 3,4,8 " ></p>
+          <p>I want to preprocess my dataset only</p>
+          <input type="checkbox" name="preOnly">
+          <p>Enter the column names</p>
+          <p><input type="text" name="attributeName" placeholder=" Ex: name,ID,age,.. "/></p>
+          <p><input type="submit" value="submit" /></p>
+
+      </form>
+       </div>
+   </body>
+</html>

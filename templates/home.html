@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Instructions</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+   </head>
+   <body>
+   <form method="POST" action="/upload" enctype="multipart/form-data">
+   <div class="small">
+      <nav>
+         <ul class="backbtn">
+            <li><a href="{{ url_for('home') }}"><< Return Back</a></li>
+         </ul>
+      </nav>
+         <div class="uploadpic">
+            <div class="image-upload">
+            <label for="file-input">
+               <img src= "static/image/uploadpic.png" >
+            </label>
+               <input id="file-input" type="file" name="inputFile">
+            </div>
+            <button type="submit" class="button" style="vertical-align:middle"><span> SUBMIT </span></button>
+            <div class="submitted">
+               {% with messages = get_flashed_messages() %}
+               {% if messages %}
+                  {% for message in messages %}
+                     {{ message }}
+                  {% endfor %}
+               {% endif %}
+               {% endwith %}
+            </div>
+            <div class="uploadword">
+            <h1>
+               <strong>
+               Upload File
+               </strong>
+            </h1>
+            </div>
+            <div class="smalluploadword">
+               <h1>
+               Files must be in CSV format and less than 2MB
+            </h1>
+            </div>
+         </div>
+      <div class="runAlgopic">
+               <a href="/askdata">
+                  <img src="static/image/run-Algo.png" >
+               </a>
+         <div class="runACword">
+            <h1>
+               <strong>
+               Run AC algorithm
+               </strong>
+            </h1>
+            </div>
+            <div class="smallrunACword">
+               <h1>
+               We are using FPgrowth with Neural Network
+            </h1>
+            </div>
+         </div>
+      </div>
+
+      <div class="downloadPic">
+               <a href="/result">
+                  <img src="static/image/downloadFile.png" >
+               </a>
+         <div class="downloadword">
+            <h1>
+               <strong>
+               Download Result
+               </strong>
+            </h1>
+            </div>
+            <div class="smalldownloadword">
+               <h1>
+               Download your results here
+            </h1>
+            </div>
+         </div>
+      </form>
+
+   </div>
+   </body>
+</html>

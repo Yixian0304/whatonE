@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Error</title>
+    </head>
+    <body>
+    <div style="text-align:center;background-color: #D6BB83; height: 100%; width: 100%" >
+    <p>Oh dear, we got an error: {{ error }}</p>
+    <p>This error might be caused by your incorrect data input</p>
+        <a href="{{ url_for('mainPage') }}">Click here retype your data</a>
+        <a href="{{ url_for('instruction') }}">Click here to read our instruction</a>
+        </div>
+    </body>
+</html>
+
